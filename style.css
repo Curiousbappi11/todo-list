@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Comfortaa:wght@300&family=DM+Serif+Text:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: #bea7ff;
+    font-family: "Comfortaa", sans-serif;
+    text-decoration: none;
+}
+
+html {
+    background-color: #000133;
+}
+
+.area {
+    background-color: #3614b1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #000133;
+    width: 30rem;
+    height: 40rem;
+    padding: 2.5rem;
+    border-radius: 3rem;
+}
+
+.status {
+    background-color: 000133;
+    width: 100%;
+    height: 10rem;
+    border: 1px solid #7c4ffa;
+    border-radius: 2rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-info h1 {
+    font-family: "DM Serif Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(227, 202, 255);
+}
+
+.status-track-fac {
+    background-color: #7c4ffa;
+    width: 7rem;
+    height: 7rem;
+    padding: 2rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addtask {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0.5rem;
+}
+
+.addtask input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #220061;
+    border-radius: 0.8rem;
+    border: 1px solid #471ac2;
+    outline: none;
+}
+
+.addtask i {
+    font-size: 2.6rem;
+    padding: 0.2rem;
+    color: #bea7ff;
+}
+
+.addtask i:hover {
+    cursor: pointer;
+}
+
+.all-lists {
+    align-items: center;
+    padding: 0rem 0.5rem;
+}
+
+.all-lists ul li {
+    display: flex;
+    align-items: center;
+    background-color: #220061;
+    border: 1px solid #471ac2;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    font-size: 1.5rem;
+    margin: 0.4rem 0;
+    /* color: #bea7ff; */
+}
+
+.all-lists ul li span {
+    width: 100%;
+    font-size: 1rem;
+    margin: 0.6rem 0.3rem;
+}
+.all-lists ul li i {
+    margin: 0.6rem 0.3rem;
+}
