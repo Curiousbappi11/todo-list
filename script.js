@@ -28,3 +28,16 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     addList()
 });
+
+
+
+
+ulList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('delete-button')) {
+        event.target.parentElement.remove();
+    }
+});
+
+// deleteButton.addEventListener('click', (event) => {
+//     let target = event.target.
+// });
