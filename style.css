@@ -29,6 +29,8 @@ html {
     height: 40rem;
     padding: 2.5rem;
     border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .status {
@@ -51,6 +53,24 @@ html {
     color: rgb(227, 202, 255);
 }
 
+.status-track-bar {
+    background-color: #240088;
+    width: 13rem;
+    height: 0.5rem;
+    border-radius: 2rem;
+    margin: 1rem 0rem;
+}
+
+.progress-bar {
+    width: 50%;
+    height: 100%;
+    border-radius: 2rem;
+    background-color: #00d123;
+    /* transition-property: width; */
+    /* transition-duration: 1s; */
+    /* transition-timing-function: ease-in-out; */
+}
+
 .status-track-fac {
     background-color: #7c4ffa;
     width: 7rem;
@@ -70,6 +90,10 @@ html {
     padding: 1.5rem 0.5rem;
 }
 
+.addtask form {
+    width: 100%;
+}
+
 .addtask input {
     width: 100%;
     padding: 0.8rem;
@@ -79,19 +103,24 @@ html {
     outline: none;
 }
 
-.addtask i {
+#create-button {
     font-size: 2.6rem;
     padding: 0.2rem;
-    color: #bea7ff;
+    color: #484bff;
 }
 
-.addtask i:hover {
+#create-button:hover {
     cursor: pointer;
 }
 
 .all-lists {
-    align-items: center;
+    height: 100%;
     padding: 0rem 0.5rem;
+}
+.all-lists ul {
+    height: 20rem;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 .all-lists ul li {
@@ -111,6 +140,19 @@ html {
     font-size: 1rem;
     margin: 0.6rem 0.3rem;
 }
+
 .all-lists ul li i {
     margin: 0.6rem 0.3rem;
+}
+
+.check-mark {
+    color: #00c500;
+}
+
+.edit-button {
+    color: #8a628f;
+}
+
+.delete-button {
+    color: #ca2424;
 }
