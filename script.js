@@ -43,6 +43,7 @@ function addList() {
                 text.innerHTML = updatedText;
                 console.log(updatedText);
                 flag = true;
+                form.reset();
             })
             document.querySelector('#input-task').value = text.innerHTML;
             form.addEventListener('submit', (event) => {
@@ -51,6 +52,7 @@ function addList() {
                 text.innerHTML = updatedText;
                 console.log(updatedText);
                 flag = true;
+                form.reset();
             })
         });
 
