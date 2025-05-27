@@ -1,9 +1,45 @@
 let createButton = document.querySelector('#create-button');
-let flag = true;
+let inputTask = document.querySelector('#input-task');
+let form = document.querySelector('form');
+let editLi = null;
 
-function addList() {
-    let inputText = document.querySelector('#input-task').value.trim();
-    if (inputText) {
+function addOrEditList() {
+    let inputText = inputTask.value.trim();
+    if (!inputText) {
+        form.reset();
+        return;
+    }
+    if (editLi) {
+
+        editLi.querySelector('span').innerText = inputText;
+
+        
+        
+            // editLi.classList.remove('li-completed');
+            // editLi.classList.add('li-pending');
+        
+            // const checkBox = editLi.querySelector('.check-mark');
+            // checkBox.classList.remove('fa-circle-check');
+            // checkBox.classList.add('fa-circle');
+        
+            // editLi.querySelector('span').classList.remove('text-completed');
+        
+            // editLi = null;
+        
+        
+        const checkBox = editLi.querySelector('.check-mark');
+        checkBox.classList.add('fa-circle');
+        checkBox.classList.remove('fa-circle-check');
+        
+        const text = editLi.querySelector('span');
+        text.classList.remove('text-completed');
+        
+        editLi.classList.add('li-pending')
+        editLi.classList.remove('li-completed')
+        
+        editLi = null;
+        
+    } else {
 
         let list = document.createElement('li');
         list.classList.add('li-pending');
@@ -32,26 +68,11 @@ function addList() {
             text.classList.toggle('text-completed');
             list.classList.toggle('li-completed')
             list.classList.toggle('li-pending')
-            console.log(checkBox);
         });
 
         editButton.addEventListener('click', () => {
-            flag = false;
-            document.querySelector('#input-task').value = text.innerHTML;
-            createButton.addEventListener('click', () => {
-                let updatedText = document.querySelector('#input-task').value.trim();
-                text.innerHTML = updatedText;
-                console.log(updatedText);
-                flag = true;
-            })
-            document.querySelector('#input-task').value = text.innerHTML;
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                let updatedText = document.querySelector('#input-task').value.trim();
-                text.innerHTML = updatedText;
-                console.log(updatedText);
-                flag = true;
-            })
+            inputTask.value = text.innerText;
+            editLi = list;
         });
 
         deleteButton.addEventListener('click', () => {
@@ -59,22 +80,17 @@ function addList() {
         });
 
     }
+    form.reset();
 }
 
-
 createButton.addEventListener('click', () => {
-    if (flag) {
-        addList();
-        form.reset();
-    }
+    addOrEditList();
 });
 
-let form = document.querySelector('form');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (flag) {
-        addList();
-        form.reset();
-    }
-})
+    addOrEditList();
+});
+
+
