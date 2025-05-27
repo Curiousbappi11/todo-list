@@ -35,12 +35,12 @@
 
                 <!-- progress-count -->
                 <div class="status-track-fac">
-                    <p>1/3</p>
+                    <p id="progress-count">0/0</p>
                 </div>
             </div>
 
             <!-- -------------------------------------- -->
-            
+
             <!-- 2nd: task input section -->
             <div class="addtask">
                 <form action="">
@@ -48,11 +48,12 @@
                     <!-- input field -->
                     <input id="input-task" type="text" placeholder="write your task">
                 </form>
-                
+
                 <!-- add button -->
-                <i id="create-button" class="fa-regular fa-circle-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg;"></i>
+                <i id="create-button" class="fa-regular fa-circle-xmark fa-rotate-by"
+                    style="--fa-rotate-angle: 45deg;"></i>
             </div>
-            
+
             <!-- -------------------------------------- -->
 
             <!-- 3rd: all the task list -->
@@ -66,7 +67,7 @@
                     </li> -->
                     <!-- <li></li> -->
                 </ul>
-                
+
                 <!-- this is blur overflow -->
                 <div class="shade"></div>
             </div>
@@ -75,6 +76,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
 </body>
 
 </html>
