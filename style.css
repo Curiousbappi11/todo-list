@@ -7,7 +7,7 @@
     list-style: none;
     color: #bea7ff;
     font-family: "Comfortaa", sans-serif;
-    text-decoration: none;
+    text-decoration: line;
 }
 
 .area {
@@ -100,14 +100,23 @@
     border: 1px solid #471ac2;
     outline: none;
 }
+.addtask input:hover {
+    border: 1px solid #6831ff;
+}
+
+.addtask input:focus {
+    border: 1px solid #6831ff;
+    background-color: #2a056d;
+}
 
 #create-button {
     font-size: 2.6rem;
     padding: 0.2rem;
-    color: #484bff;
+    color: #2f32f5;
 }
 
 #create-button:hover {
+    color: #3755ff;
     cursor: pointer;
 }
 
@@ -124,7 +133,7 @@
     scrollbar-width: none;
 }
 
-.all-lists ul li {
+.li-pending {
     display: flex;
     align-items: center;
     background-color: #220061;
@@ -133,13 +142,24 @@
     border-radius: 0.8rem;
     font-size: 1.5rem;
     margin: 0.5rem 0;
-    /* color: #bea7ff; */
+}
+
+.li-completed {
+    display: flex;
+    align-items: center;
+    background-color: #360000;
+    border: 1px solid #c21a1a;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
 }
 
 .all-lists ul li span {
     width: 100%;
     font-size: 1rem;
     margin: 0.6rem 0.3rem;
+    overflow-wrap: anywhere;
 }
 
 .all-lists>ul li i {
@@ -159,11 +179,24 @@
 .check-mark {
     color: #00c500;
 }
+.check-mark:hover {
+    color: #00ff00;
+}
 
 .edit-button {
     color: #8a628f;
 }
+.edit-button:hover {
+    color: #bb96c0;
+}
 
 .delete-button {
     color: #ca2424;
+}
+.delete-button:hover {
+    color: #ff2e2e;
+}
+
+.text-completed {
+    text-decoration: line-through;
 }
