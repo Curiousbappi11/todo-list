@@ -200,7 +200,11 @@
     text-decoration: line-through;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
+    html {
+        font-size: 15px;
+    }
+
     .status-track-bar {
         width: 6rem;
     }
