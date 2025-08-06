@@ -1,7 +1,7 @@
 {
     "name": "TODO",
     "short_name": "TODO",
-    "start_url": "./index.html",
+    "start_url": "./",
     "display": "fullscreen",
     "background_color": "#ffffff",
     "theme_color": "#0f172a",
