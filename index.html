@@ -77,24 +77,6 @@
         <button id="installBtn" style="display:none;">Install App</button>
     </div>
 
-    <script>
-        let deferredPrompt;
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            document.getElementById('installBtn').style.display = 'inline-block';
-        });
-
-        document.getElementById('installBtn').addEventListener('click', async () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                const result = await deferredPrompt.userChoice;
-                console.log(result.outcome); // accepted or dismissed
-                deferredPrompt = null;
-            }
-        });
-    </script>
 
 
     <script src="script.js"></script>
