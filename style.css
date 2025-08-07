@@ -209,6 +209,9 @@ html {
         font-size: 15px;
     }
 
+    .area {
+        height: 100dvh;
+    }
     .status-track-bar {
         width: 6rem;
     }
